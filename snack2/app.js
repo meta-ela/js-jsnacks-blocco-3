@@ -6,6 +6,7 @@ Ogni volta che ne crei uno, stampalo.
 
 */
 
+/*
 let askUser = parseInt(prompt("Inserisci un numero."));
 
 
@@ -27,3 +28,26 @@ while (isNaN(askUser)) {
     console.log(listArray);
 }
 
+*/
+
+
+// correzione live
+let askUser = parseInt(prompt("Inserisci un numero."));
+let arrayGenerati = [];
+
+
+while (arrayGenerati.length < askUser) {
+    let newArray = [];
+
+    while (newArray.length < 10) {
+        let numeroCasuale = Math.floor(Math.random() * 100) + 1;
+
+        if (!newArray.includes(numeroCasuale)) {
+            newArray.push(numeroCasuale);
+        }
+    }
+
+    arrayGenerati.push(newArray);
+}
+
+console.log(arrayGenerati);
